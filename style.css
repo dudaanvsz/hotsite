@@ -1,0 +1,424 @@
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Instrument Sans', sans-serif;
+  background-color: #f8fbff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Banner com logo à esquerda */
+.banner {
+  background-image: url("img/banner.png"); 
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 100px 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner img.logo {
+  width: 220px; /* Tamanho padrão para desktop */
+  height: auto;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 1.1rem;
+  margin: 0;
+  text-align: center;
+}
+
+/* ====== INTEGRANTES (AJUSTADO) ====== */
+.integrantes {
+  text-align: center;
+  padding: 60px 20px; /* Adicionado padding horizontal para mobile */
+  background-color: #ffffff;
+}
+
+.integrantes h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #004a91;
+  margin-bottom: 40px;
+}
+
+.cards-container {
+  display: grid;
+  /* Ajuste para permitir que os cards se ajustem melhor em telas menores */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+  gap: 20px; /* Reduzido o gap para telas menores */
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  background-color: rgb(229, 250, 255);
+  padding: 20px 15px; /* Ajustado o padding */
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  width: 400px; /* Alterado de 105% para 100% */
+  max-width: 430px;
+  min-height: 130px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 80px; /* Reduzido o tamanho da imagem */
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #b3d4ff;
+  flex-shrink: 0;
+  display: block;
+}
+
+.info {
+  text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info h3 {
+  font-size: 1.1rem; /* Reduzido o tamanho da fonte */
+  font-weight: 600;
+  color: #003366;
+  margin-bottom: 5px;
+}
+
+.info p {
+  font-size: 0.95rem; /* Reduzido o tamanho da fonte */
+  color: #004a91;
+  word-break: break-word;
+}
+
+/* Sobre o Projeto */
+.sobre {
+  background-color: rgb(229, 250, 255);
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.sobre h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #004a91;
+}
+
+.sobre p {
+  max-width: 900px;
+  margin: 10px auto;
+  font-size: 1rem;
+  color: #003366;
+ text-align: justify !important;
+  text-justify: inter-word;
+}
+
+.sobre-flex {
+  /* Padrão para desktop: texto | imagem */
+  grid-template-columns: 1fr 260px; 
+  gap: 40px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 30px auto 0;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: center;
+  display: grid; /* Adicionado display:grid aqui para consistência */
+}
+
+
+.sobre-flex > p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #003366;
+  text-align: justify !important;
+  text-justify: inter-word;
+}
+
+.ap {
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(130, 0, 33, 0.2);
+  display: block;
+  justify-self: end;
+  align-self: center;
+  margin: 0;
+}
+
+
+.funcionamento {
+  background: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.funcionamento h2 {
+  font-size: 2rem;
+  color: #004a91;
+  margin-bottom: 30px;
+}
+
+.accordion {
+  max-width: 900px;
+  margin: 0 auto;
+   text-align: justify !important;
+  text-justify: inter-word;
+}
+
+.accordion-item {
+  background-color: rgb(229, 250, 255);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.accordion-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header {
+  padding: 20px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #003366;
+}
+
+.accordion-content {
+  padding: 0 20px 20px 20px;
+  display: none;
+  color: #004a91;
+}
+
+.accordion-content img {
+  width: 200px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+/* Botões */
+.acesso, .download {
+  text-align: center;
+  padding: 70px 20px;
+  background: rgb(229, 250, 255);
+}
+
+.acesso h2, .download h2 {
+  font-size: 2rem;
+  color: #004a91;
+  margin-bottom: 10px;
+}
+
+.acesso p, .download p {
+  font-size: 1rem;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #003366;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background:#a7ddf1;
+}
+
+/* Rodapé */
+footer {
+  background: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* ========================================================================= */
+/* ======================== MEDIA QUERIES (RESPONSIVO) ===================== */
+/* ========================================================================= */
+
+/* Mobile (Telas menores que 768px) */
+@media (max-width: 768px) {
+    
+    /* Ajustes gerais de fonte e padding */
+    body {
+        font-size: 16px; 
+    }
+
+    .banner {
+        padding: 80px 15px;
+        display: block;
+        text-align: center;
+    }
+
+    .banner img.logo {
+        width: 180px; /* Reduz o logo em telas menores */
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    /* Seção Integrantes */
+    .integrantes h2 {
+        font-size: 1.7rem;
+    }
+
+    /* Cards */
+    .card {
+        flex-direction: row; /* Mantém a direção da linha, mas o conteúdo é ajustado */
+        gap: 15px;
+        padding: 15px 10px;
+        min-height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    }
+
+    .card img {
+        width: 60px; /* Reduz ainda mais a imagem para mobile */
+        height: 60px;
+    }
+
+    .info h3 {
+        font-size: 1rem;
+    }
+
+    .info p {
+        font-size: 0.9rem;
+    }
+    
+    /* Seção Sobre o Projeto */
+    .sobre {
+        padding: 40px 15px;
+    }
+
+    .sobre h2 {
+        font-size: 1.7rem;
+    }
+    .sobre-flex {
+        /* Muda para empilhamento vertical em mobile: imagem em cima, texto embaixo */
+        grid-template-columns: 1fr; 
+        gap: 25px;
+        padding: 0 15px;
+    }
+
+    .ap {
+        width: 80%; /* Aumenta a imagem para ocupar mais espaço na coluna */
+        max-width: 250px;
+        margin: 0 auto;
+        justify-self: center; /* Centraliza a imagem */
+        order: -1; /* Coloca a imagem antes do texto */
+    }
+
+    .sobre-flex > p {
+        text-align: justify !important; /* Texto justificado pode ficar ruim em telas estreitas */
+        text-justify: auto;
+    }
+
+    /* Seção Funcionamento */
+    .funcionamento {
+        padding: 40px 15px;
+    }
+
+    .funcionamento h2 {
+        font-size: 1.7rem;
+    }
+
+    .accordion-header {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+
+    .accordion-content {
+        padding: 0 15px 15px 15px;
+    }
+    
+    /* Botões */
+    .acesso, .download {
+        padding: 50px 15px;
+    }
+
+    .acesso h2, .download h2 {
+        font-size: 1.7rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
+    /* Rodapé */
+    footer {
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Tablet (Telas entre 769px e 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+    .banner {
+        padding: 90px 30px;
+    }
+
+    .cards-container {
+        /* Garante que os cards não fiquem muito grandes e haja mais de um por linha */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        max-width: 900px;
+    }
+    
+    .sobre-flex {
+        /* Mantém a estrutura de duas colunas, mas ajusta o tamanho da imagem */
+        grid-template-columns: 1fr 200px; 
+        gap: 30px;
+        max-width: 900px;
+    }
+
+    .ap {
+        width: 180px;
+        justify-self: center;
+    }
+}
